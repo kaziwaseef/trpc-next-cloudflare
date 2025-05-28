@@ -1,14 +1,23 @@
 {
   "name": "server",
   "scripts": {
-    "dev": "wrangler dev",
+    "dev": "wrangler dev --port 1337",
     "deploy": "wrangler deploy --minify",
     "cf-typegen": "wrangler types --env-interface CloudflareBindings"
   },
   "dependencies": {
-    "hono": "catalog:"
+    "@hono/swagger-ui": "^0.5.1",
+    "@hono/trpc-server": "^0.3.4",
+    "@trpc/server": "catalog:",
+    "hono": "catalog:",
+    "trpc-to-openapi": "catalog:",
+    "zod": "catalog:",
+    "zod-openapi": "catalog:"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "catalog:",
+    "@types/node": "^20.17.51",
+    "typescript": "catalog:",
     "wrangler": "catalog:"
   }
 }
