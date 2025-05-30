@@ -6,6 +6,8 @@ interface SecretMessageProps {
   inputNumber: number;
 }
 
+export const runtime = 'edge';
+
 export default function SecretMessage({ inputNumber }: SecretMessageProps) {
   const secretMessage = trpc.secret.message.useQuery({ number: inputNumber });
 

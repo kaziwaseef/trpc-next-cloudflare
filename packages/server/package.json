@@ -2,8 +2,7 @@
   "name": "server",
   "scripts": {
     "dev": "wrangler dev --port 1337",
-    "deploy": "wrangler deploy --minify",
-    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+    "deploy": "wrangler deploy --minify"
   },
   "dependencies": {
     "@hono/swagger-ui": "^0.5.1",

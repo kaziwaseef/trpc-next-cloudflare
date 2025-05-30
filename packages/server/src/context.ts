@@ -1,14 +1,15 @@
 import { Context } from 'hono';
+import { Env } from '../worker-configuration';
 
 export type HonoTypes = {
-  Bindings: CloudflareBindings;
+  Bindings: Env;
   Variables: {};
 };
 
 export type HonoContext = Context<HonoTypes>;
 
 export type TRPCContext = {
-  env: CloudflareBindings;
+  env: Env;
   get: HonoContext['get'];
   set: HonoContext['set'];
   executionCtx: HonoContext['executionCtx'];

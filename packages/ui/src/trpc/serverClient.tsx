@@ -2,7 +2,7 @@ import { createTRPCClient, httpBatchLink } from '@trpc/client';
 import { HydrationBoundary, dehydrate } from '@tanstack/react-query';
 import { cache } from 'react';
 import { makeQueryClient } from './queryClient';
-import type { AppRouter } from 'server/src/trpc/type';
+import type { AppRouter } from 'server/src/trpc/router';
 
 function getServerUrl() {
   return process.env.NEXT_PUBLIC_API_URL + '/trpc';
